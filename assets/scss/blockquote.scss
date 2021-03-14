@@ -11,26 +11,44 @@ blockquote{
 blockquote > p {
   font-family: var(--serif);
   max-width: 880px !important;
-  padding-right: 100px;
-  padding-bottom: 0;
+  padding: 0 15px !important;
   width: 100%;
   margin: 0 auto;
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1.32;
   font-weight: bold;
 }
 
+cite {
+    font-style: normal !important;
+    margin-top: 2rem;
+    font-size: 22px;
+    display: block;
+
+    &::before {
+        content: “-”;
+    }
+}
+
 @media screen and (max-width: 735px) {
-    blockquote{
+    blockquote {
         margin: 10px auto 35px;
-        font-size: 26px;
-        padding: 0 180px;
+        font-size: 24px;
+        padding: 0 40px;
+
+        cite {
+            padding: 0 40px;
+        }
     }
 }
 
 @media screen and (max-width: 540px) {
     blockquote{
-        font-size: 36px;
-        padding: 0 20px 0 40px;
+        font-size: 24px;
+        padding: 0 15px;
+
+        cite {
+            padding: 0 15px;
+        }
     }
 }
