@@ -6,14 +6,21 @@
 .cocktails-list {
     ul {
         padding: 0;
-        display: flex;
+        display: grid;
         flex-wrap: wrap;
-        width: 800px;
+        max-width: 900px;
         color: inherit;
+        position: relative;
+
+        @media (min-width: 458px) {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
 
         li {
-            flex: 1 2 50%;
-            max-width: 50%;
             padding: 1rem;
 
             &::before {
